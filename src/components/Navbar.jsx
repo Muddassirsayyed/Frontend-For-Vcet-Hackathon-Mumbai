@@ -3,6 +3,7 @@ import { useState } from 'react'
 import styles from './Navbar.module.css'
 
 const links = ['SYSTEM', 'NETWORK', 'ABOUT']
+const STREAMLIT_URL = import.meta.env.VITE_STREAMLIT_URL || 'http://192.168.20.127:8501'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -44,7 +45,7 @@ export default function Navbar() {
 
         {/* Dashboard CTA */}
         <motion.a
-          href="http://localhost:8501"
+          href={STREAMLIT_URL}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.dashboardBtn}
@@ -90,7 +91,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="http://localhost:8501"
+              href={STREAMLIT_URL}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.mobileDashboardLink}
