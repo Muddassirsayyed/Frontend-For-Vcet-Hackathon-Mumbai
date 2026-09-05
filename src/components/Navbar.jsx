@@ -44,7 +44,9 @@ export default function Navbar() {
 
         {/* Dashboard CTA */}
         <motion.a
-          href="#"
+          href="http://localhost:8501"
+          target="_blank"
+          rel="noopener noreferrer"
           className={styles.dashboardBtn}
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -87,6 +89,15 @@ export default function Navbar() {
                 {l}
               </a>
             ))}
+            <a
+              href="http://localhost:8501"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.mobileDashboardLink}
+              onClick={() => setOpen(false)}
+            >
+              → OPEN STREAMLIT DASHBOARD
+            </a>
           </motion.div>
         )}
       </AnimatePresence>
